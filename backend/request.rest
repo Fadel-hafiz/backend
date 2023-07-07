@@ -1,0 +1,57 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "nik": "3171073005050001",
+    "name": "Muhammad Fadel Hafiz",
+    "avatar":"file:///C:/Users/Fadel/Pictures/67a794e2df18a00accd3ebd017f8a163.jpg",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "position": "Admiral",
+    "gender": "Male"
+}
+
+###
+//get all Users
+GET http://localhost:5000/users
+
+###
+//get Single Data
+GET http://localhost:5000/users/3d0e18f8-1684-4f7e-b6c3-873a9daa6727
+
+###
+//Update User
+PATCH http://localhost:5000/users/8cfbfa3f-c060-4293-96e7-9fb0c36b6760
+Content-Type: application/json
+
+{
+    "nik": "3171084006060002",
+    "name": "Ahmad Kasim Ridho Kedua",
+    "email": "user@gmail.com",
+    "avatar": "67a794e2df18a00accd3ebd017f8a163",
+    "password": "",
+    "confPassword": "",
+    "position": "laksamana",
+    "gender": "male"
+}
+
+###
+//Delete User
+DELETE http://localhost:5000/users/1340bc52-4c9f-4acb-854b-2cf5586e4bc8
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin1@gmail.com",
+    "password": "1234567"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
